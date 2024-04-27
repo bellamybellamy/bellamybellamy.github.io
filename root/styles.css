@@ -1,0 +1,264 @@
+body {
+    font-family: Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+  * { 
+      box-sizing: border-box;
+  } 
+  
+  html { 
+      -ms-text-size-adjust: 100%; 
+      -webkit-text-size-adjust: 100%; 
+      font-family: sans-serif;
+      height: 100%;
+  } 
+  
+  :root { 
+      --white-smoke: #ededed; 
+      --dark-grey: #282828; 
+      --dodger-blue: #1aa6ff;
+  } 
+  
+  .w-container { 
+      max-width: 940px; 
+      margin-left: auto; 
+      margin-right: auto;
+  } 
+  
+  .navbar-content { 
+      width: 100%; 
+      max-width: none; 
+      flex: 0 auto; 
+      margin-left: 0; 
+      margin-right: 0; 
+      padding-left: 32px; 
+      padding-right: 32px; 
+      position: static; 
+      top: 0%; 
+      bottom: auto; 
+      left: 0%; 
+      right: 0%;
+  } 
+  
+  .w-container:before,.w-container:after { 
+      content: " "; 
+      grid-area: 1 / 1 / 2 / 2; 
+      display: table;
+  } 
+  
+  .w-container:after { 
+      clear: both;
+  } 
+  
+  a { 
+      background-color: rgba(0, 0, 0, 0);
+  } 
+  
+  .w-nav-link { 
+      vertical-align: top; 
+      color: #222; 
+      text-align: left; 
+      margin-left: auto; 
+      margin-right: auto; 
+      padding: 20px; 
+      text-decoration: none; 
+      display: inline-block; 
+      position: relative;
+  } 
+  
+  .nav-link { 
+      margin: 0; 
+      padding: 18px 32px; 
+      font-family: Space Mono, sans-serif; 
+      font-size: 22px; 
+      font-weight: 400;
+  } 
+  
+  .nav-link.cc { 
+      letter-spacing: normal; 
+      margin-top: 0; 
+      margin-bottom: 0; 
+      padding: 18px 0; 
+      font-size: 24px; 
+      font-weight: 700;
+  } 
+  
+  a:active,a:hover { 
+      outline: 0;
+  } 
+  
+  .nav-link:hover { 
+      color: var(--dodger-blue); 
+      font-weight: 400;
+  } 
+  
+  .nav-link.cc:hover { 
+      color: var(--dark-grey);
+  } 
+  
+  nav { 
+      display: block;
+  } 
+  
+  .w-nav-menu { 
+      float: right; 
+      position: relative;
+  } 
+  
+  .nav-menu { 
+      grid-column-gap: 36px; 
+      grid-row-gap: 36px; 
+      display: flex;
+  } 
+  
+  .w-nav-button { 
+      float: right; 
+      cursor: pointer; 
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0); 
+      tap-highlight-color: rgba(0, 0, 0, 0); 
+      -webkit-user-select: none; 
+      -ms-user-select: none; 
+      user-select: none; 
+      padding: 18px; 
+      font-size: 24px; 
+      display: none; 
+      position: relative;
+  } 
+  
+  .nav-link.cta { 
+      background-color: var(--dark-grey); 
+      color: var(--white-smoke); 
+      margin-top: 0; 
+      padding: 18px 42px;
+  } 
+  
+  .nav-link.cta:hover { 
+      background-color: var(--dodger-blue);
+  } 
+
+a:active,a:hover { 
+    outline: 0;
+} 
+
+.nav-link:hover { 
+    color: var(--dodger-blue); 
+    font-weight: 400;
+} 
+
+.nav-link.cc:hover { 
+    color: var(--dark-grey);
+} 
+
+.body-content { 
+    grid-column-gap: 64px; 
+    grid-row-gap: 64px; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    margin-top: auto; 
+    margin-bottom: auto; 
+    padding-left: 32px; 
+    padding-right: 32px; 
+    display: flex; 
+    position: static;
+} 
+
+section { 
+    display: block;
+} 
+
+.hero { 
+    height: 100vh; 
+    justify-content: center; 
+    align-items: center; 
+    display: flex; 
+    position: relative;
+} 
+
+.w-layout-blockcontainer { 
+    max-width: 940px; 
+    margin-left: auto; 
+    margin-right: auto; 
+    display: block;
+} 
+
+.display { 
+    max-width: none; 
+    margin-left: auto;
+} 
+
+.bio { 
+    max-width: 750px; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    margin-left: auto; 
+    margin-right: 0; 
+    display: flex;
+} 
+
+h1 { 
+    margin: .67em 0; 
+    font-size: 2em;
+} 
+
+h1 { 
+    margin-bottom: 10px; 
+    font-weight: bold;
+} 
+
+h1 { 
+    margin-top: 20px; 
+    font-size: 38px; 
+    line-height: 44px;
+} 
+
+.heading-2 { 
+    text-transform: uppercase; 
+    margin-top: 40px; 
+    font-family: Space Mono, sans-serif; 
+    font-size: 68px; 
+    font-weight: 700; 
+    line-height: 1;
+} 
+
+p { 
+    margin-top: 0; 
+    margin-bottom: 10px;
+} 
+
+.paragraph { 
+    text-align: left; 
+    margin-bottom: 40px; 
+    font-family: Space Mono, sans-serif; 
+    font-size: 24px; 
+    line-height: 1.25;
+} 
+
+/* Your existing CSS styles */
+
+.footer {
+    display: flex !important;
+    background-color: whitesmoke !important;
+    color: black;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer h3 {
+    margin: 0;
+}
+
