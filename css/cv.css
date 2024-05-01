@@ -1,0 +1,254 @@
+body {
+    font-family: Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--dark-grey);
+}
+
+:root { 
+    --white-smoke: #ededed; 
+    --dark-grey: #282828; 
+    --dodger-blue: #1aa6ff;
+} 
+
+.navbar-content { 
+    width: 100%; 
+    max-width: none; 
+    flex: 0 auto; 
+    margin-left: 0; 
+    margin-right: 0; 
+    padding-left: 32px; 
+    padding-right: 32px; 
+    position: static; 
+    top: 0%; 
+    bottom: auto; 
+    left: 0%; 
+    right: 0%;
+} 
+
+.w-container:before,.w-container:after { 
+    content: " "; 
+    grid-area: 1 / 1 / 2 / 2; 
+    display: table;
+} 
+
+.w-container:after { 
+    clear: both;
+} 
+
+a { 
+    /* background-color: rgba(0, 0, 0, 0); */
+} 
+
+.w-nav-link { 
+    vertical-align: top; 
+    color: var(--white-smoke); 
+    text-align: left; 
+    margin-left: auto; 
+    margin-right: auto; 
+    padding: 20px; 
+    text-decoration: none; 
+    display: inline-block; 
+    position: relative;
+} 
+
+.nav-link { 
+    margin: 0; 
+    padding: 18px 32px; 
+    font-family: Space Mono, sans-serif; 
+    font-size: 22px; 
+    font-weight: 400;
+} 
+
+.nav-link.cc { 
+    letter-spacing: normal; 
+    margin-top: 0; 
+    margin-bottom: 0; 
+    padding: 18px 0; 
+    font-size: 24px; 
+    font-weight: 700;
+    color: var(--white-smoke);
+} 
+
+a:active,a:hover { 
+    outline: 0;
+} 
+
+.nav-link:hover { 
+    color: var(--dodger-blue); 
+    font-weight: 400;
+} 
+
+.nav-link.cc:hover { 
+    color: var(--dark-grey);
+} 
+
+nav { 
+    display: block;
+} 
+
+.w-nav-menu { 
+    float: right; 
+    position: relative;
+} 
+
+.nav-menu { 
+    grid-column-gap: 36px; 
+    grid-row-gap: 36px; 
+    display: flex;
+} 
+
+.w-nav-button { 
+    float: right; 
+    cursor: pointer; 
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); 
+    -webkit-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none; 
+    padding: 18px; 
+    font-size: 24px; 
+    display: none; 
+    position: relative;
+} 
+
+.nav-link.cta { 
+    background-color: var(--dark-grey); 
+    color: var(--white-smoke); 
+    margin-top: 0; 
+    padding: 18px 42px;
+} 
+
+.nav-link.cta:hover { 
+    background-color: var(--dodger-blue);
+} 
+
+a:active,a:hover { 
+  outline: 0;
+} 
+
+.nav-link:hover { 
+  color: var(--dodger-blue); 
+  font-weight: 400;
+} 
+
+.nav-link.cc:hover { 
+  color: var(--dark-grey);
+} 
+
+main {
+    color: var(--white-smoke);
+    padding: 32px;
+}
+
+.footer {
+    display: flex;
+    color: var(--white-smoke);
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin-top: 20px; /* Add margin top */
+    background-color: var(--dark-grey);
+}
+
+.footer-content {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.footer h3 {
+    margin: 0;
+}
+
+/* Define general styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #282828;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.navbar-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+main {
+    padding: 20px;
+}
+
+.cv-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.cv-section > div {
+    flex-basis: calc(50% - 20px); /* Two columns with margin */
+    margin-bottom: 20px;
+}
+
+.cv-section > div:nth-child(odd) {
+    margin-right: 20px; /* Add margin only to odd-numbered columns */
+}
+
+/* Collapse to one column on smaller screens */
+@media screen and (max-width: 768px) {
+    .cv-section > div {
+        flex-basis: 100%;
+        margin-right: 0;
+    }
+}
+
+/* Styles for individual sections */
+.work-experience,
+.education,
+.awards,
+.software-experience {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: var(--dark-grey);
+}
+
+.title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.position,
+.year {
+    margin-bottom: 10px;
+}
+
+.software-experience ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.software-experience li {
+    margin-bottom: 5px;
+}
+
