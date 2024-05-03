@@ -1,14 +1,15 @@
 body {
-    font-family: Roboto, sans-serif;
+    font-family: Roboto, serif;
     margin: 0;
     padding: 0;
-    background-color: var(--dark-grey);
+    background-color: var(--off-white);
 }
 
 :root { 
     --white-smoke: #ededed; 
     --dark-grey: #282828; 
     --dodger-blue: #1aa6ff;
+    --off-white: #FAF9F6;
 } 
 
 .navbar-content { 
@@ -42,7 +43,7 @@ a {
 
 .w-nav-link { 
     vertical-align: top; 
-    color: var(--white-smoke); 
+    color: var(--off-white); 
     text-align: left; 
     margin-left: auto; 
     margin-right: auto; 
@@ -67,7 +68,7 @@ a {
     padding: 18px 0; 
     font-size: 24px; 
     font-weight: 700;
-    color: var(--white-smoke);
+    color: var(--off-white);
 } 
 
 a:active,a:hover { 
@@ -75,7 +76,7 @@ a:active,a:hover {
 } 
 
 .nav-link:hover { 
-    color: var(--dodger-blue); 
+    color: var(--dark-grey); 
     font-weight: 400;
 } 
 
@@ -112,14 +113,14 @@ nav {
 } 
 
 .nav-link.cta { 
-    background-color: var(--dark-grey); 
-    color: var(--white-smoke); 
+    background-color: var(--off-white); 
+    color: var(--dark-grey); 
     margin-top: 0; 
     padding: 18px 42px;
 } 
 
 .nav-link.cta:hover { 
-    background-color: var(--dodger-blue);
+    background-color: var(--dark-grey);
 } 
 
 a:active,a:hover { 
@@ -127,7 +128,7 @@ a:active,a:hover {
 } 
 
 .nav-link:hover { 
-  color: var(--dodger-blue); 
+  color: var(--dark-grey); 
   font-weight: 400;
 } 
 
@@ -136,13 +137,13 @@ a:active,a:hover {
 } 
 
 main {
-    color: var(--white-smoke);
+    color: var(--dark-grey);
     padding: 32px;
 }
 
 .footer {
     display: flex;
-    color: var(--white-smoke);
+    color: var(--off-white);
     padding: 20px;
     text-align: center;
     position: fixed;
@@ -226,11 +227,11 @@ main {
 .education,
 .awards,
 .software-experience {
-    background-color: #f2f2f2;
+    background-color: var(--dark-grey);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    color: var(--dark-grey);
+    color: var(--off-white);
 }
 
 .title {
