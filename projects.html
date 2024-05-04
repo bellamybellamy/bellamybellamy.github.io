@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Protected Page</title>
+    <link rel="stylesheet" href="css/projects.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div id="passwordForm">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+            <button onclick="validatePassword()">Enter</button>
+        </div>
+    
+        <div id="content" style="display: none;">
+            <!-- Content of the page goes here -->
+            <h1>Welcome to the protected page!</h1>
+            <p>This is some secret content that only authorized users can access.</p>
+        </div>
+    </div>
+    <footer>
+		<button onclick="window.location.href='index.html'">BACK</button>
+	</footer>
+
+    <script>
+        function validatePassword() {
+            var password = document.getElementById('password').value;
+
+            // Check if the password is correct (You can replace 'password123' with your actual password)
+            if (password === 'jkhjkk hhkjhjhjk') {
+                // Show the content if the password is correct
+                document.getElementById('passwordForm').style.display = 'none';
+                document.getElementById('content').style.display = 'block';
+            } else {
+                // Display an error message if the password is incorrect
+                alert('Incorrect password!');
+            }
+        }
+
+        // Allow pressing Enter key to validate password
+        document.getElementById('password').addEventListener('keyup', function(event) {
+            if (event.key === 'Enter') {
+                validatePassword();
+            }
+        });
+    </script>
+</body>
+</html>

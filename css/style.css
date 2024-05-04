@@ -377,10 +377,6 @@ footer {
 	margin-left: 2rem;
 }
 
-footer h1 {
-	margin: 0;
-}
-
 @media only screen and (max-width: 1106px) {
     .section {
         font-size: 4rem; /* Decrease font size for sections */

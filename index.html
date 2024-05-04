@@ -87,7 +87,28 @@
 		window.location.href = "experience.html";
 		// You can also navigate to a different page using ;
 	}
-	</script>
+</script>
+<script>
+	function eduHandleClick() {
+		// Perform desired action here, for example:
+		window.location.href = "education.html";
+		// You can also navigate to a different page using ;
+	}
+</script>
+<script>
+	function intHandleClick() {
+		// Perform desired action here, for example:
+		window.location.href = "interests.html";
+		// You can also navigate to a different page using ;
+	}
+</script>
+<script>
+	function projHandleClick() {
+		// Perform desired action here, for example:
+		window.location.href = "projects.html";
+		// You can also navigate to a different page using ;
+	}
+</script>
 </head>
 <body>
 <main>
@@ -95,15 +116,15 @@
 		<div class="number">1</div>
 		<div class="title">Experience</div>
 	</div>
-    <div class="section">
+    <div class="section" onclick="eduHandleClick()">
         <div class="number">2</div>
         <div class="title">Education</div>
     </div>
-    <div class="section">
+    <div class="section" onclick="intHandleClick()">
         <div class="number">3</div>
         <div class="title">Interests</div>
     </div>
-    <div class="section">
+    <div class="section" onclick="projHandleClick()">
         <div class="number">4</div>
         <div class="title">Projects</div>
     </div>

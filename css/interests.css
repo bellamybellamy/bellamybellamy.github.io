@@ -1,0 +1,288 @@
+/* .mediaViewInfo {
+	--web-view-name: Web 1920 – 4;
+	--web-view-id: Web_1920__4;
+	--web-scale-to-fit: true;
+	--web-scale-to-fit-type: width;
+	--web-scale-on-resize: true;
+	--web-enable-deep-linking: true;
+}
+:root {
+	--web-view-ids: Web_1920__4;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	border: none;
+}
+#Web_1920__4 {
+	position: absolute;
+	width: 1920px;
+	height: 1080px;
+	background-color: rgba(247,242,229,1);
+	overflow: hidden;
+	--web-view-name: Web 1920 – 4;
+	--web-view-id: Web_1920__4;
+	--web-scale-to-fit: true;
+	--web-scale-to-fit-type: width;
+	--web-scale-on-resize: true;
+	--web-enable-deep-linking: true;
+}
+#Interests {
+	left: 37px;
+	top: 802px;
+	position: absolute;
+	overflow: visible;
+	width: 825px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 211px;
+	color: rgba(42,40,40,1);
+}
+#Rectangle_29 {
+	fill: transparent;
+	stroke: rgba(42,40,40,1);
+	stroke-width: 3px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.Rectangle_29 {
+	position: absolute;
+	overflow: visible;
+	width: 719.75px;
+	height: 737px;
+	left: 1080.75px;
+	top: 132px;
+}
+#Queer_Criminology {
+	left: 202px;
+	top: 87px;
+	position: absolute;
+	overflow: visible;
+	width: 353px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 42px;
+	color: rgba(42,40,40,1);
+}
+#Surveillance__Technologies_and {
+	left: 148px;
+	top: 172px;
+	position: absolute;
+	overflow: visible;
+	width: 419px;
+	white-space: nowrap;
+	text-align: right;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 42px;
+	color: rgba(42,40,40,1);
+}
+#Abolition {
+	left: 395px;
+	top: 367px;
+	position: absolute;
+	overflow: visible;
+	width: 172px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 42px;
+	color: rgba(42,40,40,1);
+}
+#Current_Reads {
+	left: 1081px;
+	top: 62px;
+	position: absolute;
+	overflow: visible;
+	width: 271px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 42px;
+	color: rgba(42,40,40,1);
+}
+#Developing__pre-arrest_diversi {
+	left: 185px;
+	top: 442px;
+	position: absolute;
+	overflow: visible;
+	width: 386px;
+	white-space: nowrap;
+	text-align: right;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 42px;
+	color: rgba(42,40,40,1);
+}
+#Protective__factors_for_queer_ {
+	left: 164px;
+	top: 637px;
+	position: absolute;
+	overflow: visible;
+	width: 428px;
+	white-space: nowrap;
+	text-align: right;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 42px;
+	color: rgba(42,40,40,1);
+}
+#Rectangle_30 {
+	fill: rgba(42,40,40,1);
+	stroke: rgba(42,40,40,1);
+	stroke-width: 2px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.Rectangle_30 {
+	position: absolute;
+	overflow: visible;
+	width: 296px;
+	height: 96px;
+	left: 1584px;
+	top: 941px;
+}
+#Back {
+	left: 1685px;
+	top: 962px;
+	position: absolute;
+	overflow: visible;
+	width: 95px;
+	white-space: nowrap;
+	text-align: right;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 42px;
+	color: rgba(247,242,229,1);
+} */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, sans-serif;
+	display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+	background-color: #F5EDD9;;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+	align-items: center;
+	flex: 1;
+	padding: 2rem;
+	overflow-y: auto;
+}
+
+.interests-list {
+    flex: 1;
+}
+
+.word {
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: #121111;
+}
+
+.books-container {
+    flex: 1;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    /* padding: 20px; */
+    border: 2px solid #121111;
+	overflow-y: scroll;
+}
+
+.container-title {
+	background-color: #121111;
+	color: #F5EDD9;
+	padding: 1rem;
+	text-align: center;
+	font-size: 2rem;
+}
+
+#Current_Books {
+    font-size: 24px;
+    color: #121111;
+	padding: 20px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem;
+    margin-top: auto; 
+	font-size: 6vw;
+	align-items: center;
+	flex-flow: row wrap;
+}
+
+footer h1 {
+    margin: 0;
+    text-align: Left;
+}
+
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .section {
+        width: 100%;
+    }
+}
+
+footer button {
+    background-color: #121111;
+    color: #F5EDD9;
+    border: none;
+    padding: 20px 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+	width: 8rem;
+	height: 3rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+footer button:hover {
+    background-color: #121111;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .section {
+        width: 100%;
+    }
+
+    footer button {
+        width: 100%;
+        padding: 8px 10px;
+        font-size: 0.8rem;
+    }
+}

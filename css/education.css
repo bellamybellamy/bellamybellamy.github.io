@@ -1,0 +1,564 @@
+/* .mediaViewInfo {
+	--web-view-name: Web 1920 – 3;
+	--web-view-id: Web_1920__3;
+	--web-scale-to-fit: true;
+	--web-scale-to-fit-type: width;
+	--web-scale-on-resize: true;
+	--web-enable-deep-linking: true;
+}
+:root {
+	--web-view-ids: Web_1920__3;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	border: none;
+}
+#Web_1920__3 {
+	position: absolute;
+	width: 1920px;
+	height: 1080px;
+	background-color: rgba(247,242,229,1);
+	overflow: hidden;
+	--web-view-name: Web 1920 – 3;
+	--web-view-id: Web_1920__3;
+	--web-scale-to-fit: true;
+	--web-scale-to-fit-type: width;
+	--web-scale-on-resize: true;
+	--web-enable-deep-linking: true;
+}
+#Education {
+	left: 37px;
+	top: 802px;
+	position: absolute;
+	overflow: visible;
+	width: 938px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 211px;
+	color: rgba(42,40,40,1);
+}
+#Rectangle_16 {
+	fill: transparent;
+	stroke: rgba(42,40,40,1);
+	stroke-width: 3px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.Rectangle_16 {
+	position: absolute;
+	overflow: visible;
+	width: 607px;
+	height: 254px;
+	left: 50px;
+	top: 48px;
+}
+#Rectangle_17 {
+	fill: transparent;
+	stroke: rgba(42,40,40,1);
+	stroke-width: 3px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.Rectangle_17 {
+	position: absolute;
+	overflow: visible;
+	width: 607px;
+	height: 254px;
+	left: 657px;
+	top: 48px;
+}
+#Rectangle_18 {
+	fill: transparent;
+	stroke: rgba(42,40,40,1);
+	stroke-width: 3px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.Rectangle_18 {
+	position: absolute;
+	overflow: visible;
+	width: 607px;
+	height: 254px;
+	left: 1264px;
+	top: 48px;
+}
+#Rectangle_22 {
+	fill: transparent;
+	stroke: rgba(42,40,40,1);
+	stroke-width: 3px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.Rectangle_22 {
+	position: absolute;
+	overflow: visible;
+	width: 607px;
+	height: 254px;
+	left: 50px;
+	top: 556px;
+}
+#Rectangle_23 {
+	fill: transparent;
+	stroke: rgba(42,40,40,1);
+	stroke-width: 3px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.Rectangle_23 {
+	position: absolute;
+	overflow: visible;
+	width: 607px;
+	height: 254px;
+	left: 657px;
+	top: 556px;
+}
+#Rectangle_24 {
+	fill: transparent;
+	stroke: rgba(42,40,40,1);
+	stroke-width: 3px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.Rectangle_24 {
+	position: absolute;
+	overflow: visible;
+	width: 607px;
+	height: 254px;
+	left: 1264px;
+	top: 556px;
+}
+#Rectangle_25 {
+	fill: rgba(42,40,40,1);
+}
+.Rectangle_25 {
+	position: absolute;
+	overflow: visible;
+	width: 1821px;
+	height: 123px;
+	left: 50px;
+	top: 368px;
+}
+#n_1 {
+	left: 1283px;
+	top: 54px;
+	position: absolute;
+	overflow: visible;
+	width: 90px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 79px;
+	color: rgba(42,40,40,1);
+}
+#Arizona_State_University_ {
+	left: 1413px;
+	top: 131px;
+	position: absolute;
+	overflow: visible;
+	width: 435px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 40px;
+	color: rgba(42,40,40,1);
+}
+#Innovation_in_Society_BA_ {
+	left: 1391px;
+	top: 175px;
+	position: absolute;
+	overflow: visible;
+	width: 457px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 40px;
+	color: rgba(42,40,40,1);
+}
+#n_2 {
+	left: 675px;
+	top: 48px;
+	position: absolute;
+	overflow: visible;
+	width: 90px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 79px;
+	color: rgba(42,40,40,1);
+}
+#Arizona_State_University_v {
+	left: 804px;
+	top: 127px;
+	position: absolute;
+	overflow: visible;
+	width: 435px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 40px;
+	color: rgba(42,40,40,1);
+}
+#Criminology__Criminal_Justice_ {
+	left: 688px;
+	top: 175px;
+	position: absolute;
+	overflow: visible;
+	width: 546px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 40px;
+	color: rgba(42,40,40,1);
+}
+#in_progress {
+	left: 1011px;
+	top: 74px;
+	position: absolute;
+	overflow: visible;
+	width: 223px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Roboto;
+	font-style: italic;
+	font-weight: normal;
+	font-size: 40px;
+	color: rgba(42,40,40,1);
+}
+#completed {
+	left: 1619px;
+	top: 78px;
+	position: absolute;
+	overflow: visible;
+	width: 213px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Roboto;
+	font-style: italic;
+	font-weight: normal;
+	font-size: 40px;
+	color: rgba(42,40,40,1);
+}
+#Awards__Honors {
+	left: 628px;
+	top: 368px;
+	position: absolute;
+	overflow: visible;
+	width: 665px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 86px;
+	color: rgba(247,242,229,1);
+}
+#Arizona_State_University_ {
+	left: 1413px;
+	top: 131px;
+	position: absolute;
+	overflow: visible;
+	width: 435px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 40px;
+	color: rgba(42,40,40,1);
+}
+#Innovation_in_Society_BA_ {
+	left: 1391px;
+	top: 175px;
+	position: absolute;
+	overflow: visible;
+	width: 457px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 40px;
+	color: rgba(42,40,40,1);
+}
+#JAN_2021 {
+	left: 1014px;
+	top: 606px;
+	position: absolute;
+	overflow: visible;
+	width: 201px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Roboto;
+	font-style: italic;
+	font-weight: normal;
+	font-size: 40px;
+	color: rgba(42,40,40,1);
+}
+#Graduate_Immersion_Program {
+	left: 688px;
+	top: 659px;
+	position: absolute;
+	overflow: visible;
+	width: 534px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 40px;
+	color: rgba(42,40,40,1);
+}
+#Arizona_State_University_ba {
+	left: 792px;
+	top: 712px;
+	position: absolute;
+	overflow: visible;
+	width: 423px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 40px;
+	color: rgba(42,40,40,1);
+}
+#JAN_20217_-_2020 {
+	left: 1507px;
+	top: 603px;
+	position: absolute;
+	overflow: visible;
+	width: 341px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Roboto;
+	font-style: italic;
+	font-weight: normal;
+	font-size: 40px;
+	color: rgba(42,40,40,1);
+}
+#Undergrad_Research_Fellowship {
+	left: 1277px;
+	top: 660px;
+	position: absolute;
+	overflow: visible;
+	width: 570px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 40px;
+	color: rgba(42,40,40,1);
+}
+#Arizona_State_University_bb {
+	left: 1425px;
+	top: 709px;
+	position: absolute;
+	overflow: visible;
+	width: 423px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 40px;
+	color: rgba(42,40,40,1);
+}
+#n_4 {
+	left: 1283px;
+	top: 554px;
+	position: absolute;
+	overflow: visible;
+	width: 90px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 79px;
+	color: rgba(42,40,40,1);
+}
+#n_3 {
+	left: 675px;
+	top: 551px;
+	position: absolute;
+	overflow: visible;
+	width: 90px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 79px;
+	color: rgba(42,40,40,1);
+}
+#Rectangle_30 {
+	fill: rgba(42,40,40,1);
+	stroke: rgba(42,40,40,1);
+	stroke-width: 2px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.Rectangle_30 {
+	position: absolute;
+	overflow: visible;
+	width: 296px;
+	height: 96px;
+	left: 1584px;
+	top: 941px;
+}
+#Back {
+	left: 1685px;
+	top: 962px;
+	position: absolute;
+	overflow: visible;
+	width: 95px;
+	white-space: nowrap;
+	text-align: right;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 42px;
+	color: rgba(247,242,229,1);
+} */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 20px 0;
+    font-family: Roboto, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the body covers the full viewport height */
+	background-color: #F5EDD9;
+}
+
+.container {
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* This allows the container to grow to take up the available space */
+}
+
+.header-grid,
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Three equal-width columns */
+    gap: 20px;
+	padding: 2rem;
+}
+
+section {
+	font-size: 1.5rem;
+}
+
+.education-item {
+    background-color: #F5EDD9;
+    border: 3px solid #121111;
+    padding: 20px;
+    position: relative;
+}
+
+.number {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 24px;
+}
+
+.content {
+    margin-top: 30px;
+}
+
+.divider {
+    background-color: #121111;
+    color: #F5EDD9;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 2rem;
+    margin-top: auto; 
+	font-size: 6vw;
+	align-items: center;
+	flex-flow: row wrap;
+}
+
+footer h1 {
+    margin: 0;
+    text-align: left;
+}
+
+footer button {
+    background-color: #121111;
+    color: #f5edd9;
+    border: none;
+    padding: 20px 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+	width: 8rem;
+	height: 3rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+footer button:hover {
+    background-color: #333;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .section {
+        width: 100%;
+    }
+
+    footer button {
+        width: 100%;
+        padding: 8px 10px;
+        font-size: 0.8rem;
+    }
+}
+
