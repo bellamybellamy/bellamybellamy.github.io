@@ -1,0 +1,192 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 800px;
+                 background-color: #ffffff;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#f39c12", "font": {"color": "black"}, "id": "S001", "label": "S001", "shape": "dot", "size": 16, "title": "S001\u003cbr\u003eAt Grade\u003cbr\u003eActivities: 1\u003cbr\u003eEngagement: 0.49"}, {"color": "#27ae60", "font": {"color": "black"}, "id": "S002", "label": "S002", "shape": "dot", "size": 20, "title": "S002\u003cbr\u003eABOVE Grade\u003cbr\u003eActivities: 2\u003cbr\u003eEngagement: 0.67"}, {"color": "#c0392b", "font": {"color": "black"}, "id": "S003", "label": "S003", "shape": "dot", "size": 12, "title": "S003\u003cbr\u003eBELOW Grade\u003cbr\u003eActivities: 0\u003cbr\u003eEngagement: 0.28"}, {"color": "#f39c12", "font": {"color": "black"}, "id": "S004", "label": "S004", "shape": "dot", "size": 16, "title": "S004\u003cbr\u003eAt Grade\u003cbr\u003eActivities: 1\u003cbr\u003eEngagement: 0.09"}, {"color": "#f39c12", "font": {"color": "black"}, "id": "S005", "label": "S005", "shape": "dot", "size": 20, "title": "S005\u003cbr\u003eAt Grade\u003cbr\u003eActivities: 2\u003cbr\u003eEngagement: 0.49"}, {"color": "#c0392b", "font": {"color": "black"}, "id": "S006", "label": "S006", "shape": "dot", "size": 12, "title": "S006\u003cbr\u003eBELOW Grade\u003cbr\u003eActivities: 0\u003cbr\u003eEngagement: 0.01"}, {"color": "#27ae60", "font": {"color": "black"}, "id": "S007", "label": "S007", "shape": "dot", "size": 20, "title": "S007\u003cbr\u003eABOVE Grade\u003cbr\u003eActivities: 2\u003cbr\u003eEngagement: 0.59"}, {"color": "#f39c12", "font": {"color": "black"}, "id": "S008", "label": "S008", "shape": "dot", "size": 16, "title": "S008\u003cbr\u003eAt Grade\u003cbr\u003eActivities: 1\u003cbr\u003eEngagement: 0.28"}, {"color": "#c0392b", "font": {"color": "black"}, "id": "S009", "label": "S009", "shape": "dot", "size": 16, "title": "S009\u003cbr\u003eBELOW Grade\u003cbr\u003eActivities: 1\u003cbr\u003eEngagement: 0.09"}, {"color": "#f39c12", "font": {"color": "black"}, "id": "S010", "label": "S010", "shape": "dot", "size": 20, "title": "S010\u003cbr\u003eAt Grade\u003cbr\u003eActivities: 2\u003cbr\u003eEngagement: 0.49"}, {"color": "#f39c12", "font": {"color": "black"}, "id": "S011", "label": "S011", "shape": "dot", "size": 20, "title": "S011\u003cbr\u003eAt Grade\u003cbr\u003eActivities: 2\u003cbr\u003eEngagement: 0.67"}, {"color": "#c0392b", "font": {"color": "black"}, "id": "S012", "label": "S012", "shape": "dot", "size": 12, "title": "S012\u003cbr\u003eBELOW Grade\u003cbr\u003eActivities: 0\u003cbr\u003eEngagement: 0.28"}, {"color": "#27ae60", "font": {"color": "black"}, "id": "S013", "label": "S013", "shape": "dot", "size": 20, "title": "S013\u003cbr\u003eABOVE Grade\u003cbr\u003eActivities: 2\u003cbr\u003eEngagement: 0.49"}, {"color": "#f39c12", "font": {"color": "black"}, "id": "S014", "label": "S014", "shape": "dot", "size": 16, "title": "S014\u003cbr\u003eAt Grade\u003cbr\u003eActivities: 1\u003cbr\u003eEngagement: 0.28"}, {"color": "#c0392b", "font": {"color": "black"}, "id": "S015", "label": "S015", "shape": "dot", "size": 12, "title": "S015\u003cbr\u003eBELOW Grade\u003cbr\u003eActivities: 0\u003cbr\u003eEngagement: 0.09"}, {"color": "#f39c12", "font": {"color": "black"}, "id": "S016", "label": "S016", "shape": "dot", "size": 20, "title": "S016\u003cbr\u003eAt Grade\u003cbr\u003eActivities: 2\u003cbr\u003eEngagement: 0.49"}, {"color": "#27ae60", "font": {"color": "black"}, "id": "S017", "label": "S017", "shape": "dot", "size": 20, "title": "S017\u003cbr\u003eABOVE Grade\u003cbr\u003eActivities: 2\u003cbr\u003eEngagement: 0.67"}, {"color": "#f39c12", "font": {"color": "black"}, "id": "S018", "label": "S018", "shape": "dot", "size": 16, "title": "S018\u003cbr\u003eAt Grade\u003cbr\u003eActivities: 1\u003cbr\u003eEngagement: 0.28"}, {"color": "#c0392b", "font": {"color": "black"}, "id": "S019", "label": "S019", "shape": "dot", "size": 16, "title": "S019\u003cbr\u003eBELOW Grade\u003cbr\u003eActivities: 1\u003cbr\u003eEngagement: 0.09"}, {"color": "#f39c12", "font": {"color": "black"}, "id": "S020", "label": "S020", "shape": "dot", "size": 20, "title": "S020\u003cbr\u003eAt Grade\u003cbr\u003eActivities: 2\u003cbr\u003eEngagement: 0.49"}, {"color": "#f39c12", "font": {"color": "black"}, "id": "S021", "label": "S021", "shape": "dot", "size": 16, "title": "S021\u003cbr\u003eAt Grade\u003cbr\u003eActivities: 1\u003cbr\u003eEngagement: 0.28"}, {"color": "#27ae60", "font": {"color": "black"}, "id": "S022", "label": "S022", "shape": "dot", "size": 20, "title": "S022\u003cbr\u003eABOVE Grade\u003cbr\u003eActivities: 2\u003cbr\u003eEngagement: 0.67"}, {"color": "#c0392b", "font": {"color": "black"}, "id": "S023", "label": "S023", "shape": "dot", "size": 12, "title": "S023\u003cbr\u003eBELOW Grade\u003cbr\u003eActivities: 0\u003cbr\u003eEngagement: 0.09"}, {"color": "#f39c12", "font": {"color": "black"}, "id": "S024", "label": "S024", "shape": "dot", "size": 20, "title": "S024\u003cbr\u003eAt Grade\u003cbr\u003eActivities: 2\u003cbr\u003eEngagement: 0.49"}, {"color": "#f39c12", "font": {"color": "black"}, "id": "S025", "label": "S025", "shape": "dot", "size": 16, "title": "S025\u003cbr\u003eAt Grade\u003cbr\u003eActivities: 1\u003cbr\u003eEngagement: 0.28"}, {"color": "#f39c12", "font": {"color": "black"}, "id": "reading_at", "label": "At Grade Level", "shape": "dot", "size": 49, "title": "NEUTRAL\u003cbr\u003eAt Grade Level\u003cbr\u003eChildren: 13"}, {"color": "#27ae60", "font": {"color": "black"}, "id": "act_sports", "label": "School Sports", "shape": "dot", "size": 43, "title": "\u2713 PROTECTIVE FACTOR\u003cbr\u003eSchool Sports\u003cbr\u003eChildren: 11"}, {"color": "#27ae60", "font": {"color": "black"}, "id": "enjoys_high", "label": "High Enjoyment", "shape": "dot", "size": 46, "title": "\u2713 PROTECTIVE FACTOR\u003cbr\u003eHigh Enjoyment\u003cbr\u003eChildren: 12"}, {"color": "#27ae60", "font": {"color": "black"}, "id": "trouble_low", "label": "Low Trouble", "shape": "dot", "size": 64, "title": "\u2713 PROTECTIVE FACTOR\u003cbr\u003eLow Trouble\u003cbr\u003eChildren: 18"}, {"color": "#27ae60", "font": {"color": "black"}, "id": "reading_above", "label": "Above Grade Level", "shape": "dot", "size": 25, "title": "\u2713 PROTECTIVE FACTOR\u003cbr\u003eAbove Grade Level\u003cbr\u003eChildren: 5"}, {"color": "#27ae60", "font": {"color": "black"}, "id": "act_comm_sports", "label": "Community Sports", "shape": "dot", "size": 28, "title": "\u2713 PROTECTIVE FACTOR\u003cbr\u003eCommunity Sports\u003cbr\u003eChildren: 6"}, {"color": "#e74c3c", "font": {"color": "black"}, "id": "reading_below", "label": "Below Grade Level", "shape": "dot", "size": 31, "title": "\u26a0\ufe0f RISK FACTOR\u003cbr\u003eBelow Grade Level\u003cbr\u003eChildren: 7"}, {"color": "#e74c3c", "font": {"color": "black"}, "id": "act_none", "label": "No Activities", "shape": "dot", "size": 25, "title": "\u26a0\ufe0f RISK FACTOR\u003cbr\u003eNo Activities\u003cbr\u003eChildren: 5"}, {"color": "#f39c12", "font": {"color": "black"}, "id": "enjoys_mid", "label": "Medium Enjoyment", "shape": "dot", "size": 31, "title": "NEUTRAL\u003cbr\u003eMedium Enjoyment\u003cbr\u003eChildren: 7"}, {"color": "#e74c3c", "font": {"color": "black"}, "id": "trouble_mid", "label": "Medium Trouble", "shape": "dot", "size": 25, "title": "\u26a0\ufe0f RISK FACTOR\u003cbr\u003eMedium Trouble\u003cbr\u003eChildren: 5"}, {"color": "#27ae60", "font": {"color": "black"}, "id": "act_arts", "label": "Arts", "shape": "dot", "size": 25, "title": "\u2713 PROTECTIVE FACTOR\u003cbr\u003eArts\u003cbr\u003eChildren: 5"}, {"color": "#e74c3c", "font": {"color": "black"}, "id": "enjoys_low", "label": "Low Enjoyment", "shape": "dot", "size": 28, "title": "\u26a0\ufe0f RISK FACTOR\u003cbr\u003eLow Enjoyment\u003cbr\u003eChildren: 6"}, {"color": "#27ae60", "font": {"color": "black"}, "id": "act_clubs", "label": "Clubs", "shape": "dot", "size": 22, "title": "\u2713 PROTECTIVE FACTOR\u003cbr\u003eClubs\u003cbr\u003eChildren: 4"}, {"color": "#e74c3c", "font": {"color": "black"}, "id": "trouble_high", "label": "High Trouble", "shape": "dot", "size": 16, "title": "\u26a0\ufe0f RISK FACTOR\u003cbr\u003eHigh Trouble\u003cbr\u003eChildren: 2"}, {"color": "#27ae60", "font": {"color": "black"}, "id": "act_faith", "label": "Faith Activities", "shape": "dot", "size": 25, "title": "\u2713 PROTECTIVE FACTOR\u003cbr\u003eFaith Activities\u003cbr\u003eChildren: 5"}]);
+                  edges = new vis.DataSet([{"color": "#f39c12", "from": "S001", "to": "reading_at", "width": 1.5}, {"color": "#27ae60", "from": "S001", "to": "act_sports", "width": 1.5}, {"color": "#27ae60", "from": "S001", "to": "enjoys_high", "width": 1.5}, {"color": "#27ae60", "from": "S001", "to": "trouble_low", "width": 1.5}, {"color": "#27ae60", "from": "S002", "to": "reading_above", "width": 1.5}, {"color": "#27ae60", "from": "S002", "to": "act_sports", "width": 1.5}, {"color": "#27ae60", "from": "S002", "to": "act_comm_sports", "width": 1.5}, {"color": "#27ae60", "from": "S002", "to": "enjoys_high", "width": 1.5}, {"color": "#27ae60", "from": "S002", "to": "trouble_low", "width": 1.5}, {"color": "#e74c3c", "from": "S003", "to": "reading_below", "width": 2}, {"color": "#e74c3c", "from": "S003", "to": "act_none", "width": 2}, {"color": "#f39c12", "from": "S003", "to": "enjoys_mid", "width": 1.5}, {"color": "#e74c3c", "from": "S003", "to": "trouble_mid", "width": 2}, {"color": "#f39c12", "from": "S004", "to": "reading_at", "width": 1.5}, {"color": "#27ae60", "from": "S004", "to": "act_arts", "width": 1.5}, {"color": "#e74c3c", "from": "S004", "to": "enjoys_low", "width": 2}, {"color": "#27ae60", "from": "S004", "to": "trouble_low", "width": 1.5}, {"color": "#f39c12", "from": "S005", "to": "reading_at", "width": 1.5}, {"color": "#27ae60", "from": "S005", "to": "act_sports", "width": 1.5}, {"color": "#27ae60", "from": "S005", "to": "act_clubs", "width": 1.5}, {"color": "#27ae60", "from": "S005", "to": "enjoys_high", "width": 1.5}, {"color": "#27ae60", "from": "S005", "to": "trouble_low", "width": 1.5}, {"color": "#e74c3c", "from": "S006", "to": "reading_below", "width": 2}, {"color": "#e74c3c", "from": "S006", "to": "act_none", "width": 2}, {"color": "#e74c3c", "from": "S006", "to": "enjoys_low", "width": 2}, {"color": "#e74c3c", "from": "S006", "to": "trouble_high", "width": 2}, {"color": "#27ae60", "from": "S007", "to": "reading_above", "width": 1.5}, {"color": "#27ae60", "from": "S007", "to": "act_sports", "width": 1.5}, {"color": "#27ae60", "from": "S007", "to": "act_faith", "width": 1.5}, {"color": "#27ae60", "from": "S007", "to": "enjoys_high", "width": 1.5}, {"color": "#27ae60", "from": "S007", "to": "trouble_low", "width": 1.5}, {"color": "#f39c12", "from": "S008", "to": "reading_at", "width": 1.5}, {"color": "#27ae60", "from": "S008", "to": "act_comm_sports", "width": 1.5}, {"color": "#f39c12", "from": "S008", "to": "enjoys_mid", "width": 1.5}, {"color": "#27ae60", "from": "S008", "to": "trouble_low", "width": 1.5}, {"color": "#e74c3c", "from": "S009", "to": "reading_below", "width": 2}, {"color": "#27ae60", "from": "S009", "to": "act_arts", "width": 1.5}, {"color": "#e74c3c", "from": "S009", "to": "enjoys_low", "width": 2}, {"color": "#e74c3c", "from": "S009", "to": "trouble_mid", "width": 2}, {"color": "#f39c12", "from": "S010", "to": "reading_at", "width": 1.5}, {"color": "#27ae60", "from": "S010", "to": "act_sports", "width": 1.5}, {"color": "#27ae60", "from": "S010", "to": "act_comm_sports", "width": 1.5}, {"color": "#27ae60", "from": "S010", "to": "enjoys_high", "width": 1.5}, {"color": "#27ae60", "from": "S010", "to": "trouble_low", "width": 1.5}, {"color": "#f39c12", "from": "S011", "to": "reading_at", "width": 1.5}, {"color": "#27ae60", "from": "S011", "to": "act_clubs", "width": 1.5}, {"color": "#27ae60", "from": "S011", "to": "act_faith", "width": 1.5}, {"color": "#27ae60", "from": "S011", "to": "enjoys_high", "width": 1.5}, {"color": "#27ae60", "from": "S011", "to": "trouble_low", "width": 1.5}, {"color": "#e74c3c", "from": "S012", "to": "reading_below", "width": 2}, {"color": "#e74c3c", "from": "S012", "to": "act_none", "width": 2}, {"color": "#f39c12", "from": "S012", "to": "enjoys_mid", "width": 1.5}, {"color": "#e74c3c", "from": "S012", "to": "trouble_mid", "width": 2}, {"color": "#27ae60", "from": "S013", "to": "reading_above", "width": 1.5}, {"color": "#27ae60", "from": "S013", "to": "act_sports", "width": 1.5}, {"color": "#27ae60", "from": "S013", "to": "act_arts", "width": 1.5}, {"color": "#27ae60", "from": "S013", "to": "enjoys_high", "width": 1.5}, {"color": "#27ae60", "from": "S013", "to": "trouble_low", "width": 1.5}, {"color": "#f39c12", "from": "S014", "to": "reading_at", "width": 1.5}, {"color": "#27ae60", "from": "S014", "to": "act_faith", "width": 1.5}, {"color": "#f39c12", "from": "S014", "to": "enjoys_mid", "width": 1.5}, {"color": "#27ae60", "from": "S014", "to": "trouble_low", "width": 1.5}, {"color": "#e74c3c", "from": "S015", "to": "reading_below", "width": 2}, {"color": "#e74c3c", "from": "S015", "to": "act_none", "width": 2}, {"color": "#e74c3c", "from": "S015", "to": "enjoys_low", "width": 2}, {"color": "#e74c3c", "from": "S015", "to": "trouble_mid", "width": 2}, {"color": "#f39c12", "from": "S016", "to": "reading_at", "width": 1.5}, {"color": "#27ae60", "from": "S016", "to": "act_sports", "width": 1.5}, {"color": "#27ae60", "from": "S016", "to": "act_clubs", "width": 1.5}, {"color": "#27ae60", "from": "S016", "to": "enjoys_high", "width": 1.5}, {"color": "#27ae60", "from": "S016", "to": "trouble_low", "width": 1.5}, {"color": "#27ae60", "from": "S017", "to": "reading_above", "width": 1.5}, {"color": "#27ae60", "from": "S017", "to": "act_sports", "width": 1.5}, {"color": "#27ae60", "from": "S017", "to": "act_comm_sports", "width": 1.5}, {"color": "#27ae60", "from": "S017", "to": "enjoys_high", "width": 1.5}, {"color": "#27ae60", "from": "S017", "to": "trouble_low", "width": 1.5}, {"color": "#f39c12", "from": "S018", "to": "reading_at", "width": 1.5}, {"color": "#27ae60", "from": "S018", "to": "act_comm_sports", "width": 1.5}, {"color": "#f39c12", "from": "S018", "to": "enjoys_mid", "width": 1.5}, {"color": "#27ae60", "from": "S018", "to": "trouble_low", "width": 1.5}, {"color": "#e74c3c", "from": "S019", "to": "reading_below", "width": 2}, {"color": "#27ae60", "from": "S019", "to": "act_arts", "width": 1.5}, {"color": "#e74c3c", "from": "S019", "to": "enjoys_low", "width": 2}, {"color": "#e74c3c", "from": "S019", "to": "trouble_mid", "width": 2}, {"color": "#f39c12", "from": "S020", "to": "reading_at", "width": 1.5}, {"color": "#27ae60", "from": "S020", "to": "act_sports", "width": 1.5}, {"color": "#27ae60", "from": "S020", "to": "act_faith", "width": 1.5}, {"color": "#27ae60", "from": "S020", "to": "enjoys_high", "width": 1.5}, {"color": "#27ae60", "from": "S020", "to": "trouble_low", "width": 1.5}, {"color": "#f39c12", "from": "S021", "to": "reading_at", "width": 1.5}, {"color": "#27ae60", "from": "S021", "to": "act_clubs", "width": 1.5}, {"color": "#f39c12", "from": "S021", "to": "enjoys_mid", "width": 1.5}, {"color": "#27ae60", "from": "S021", "to": "trouble_low", "width": 1.5}, {"color": "#27ae60", "from": "S022", "to": "reading_above", "width": 1.5}, {"color": "#27ae60", "from": "S022", "to": "act_sports", "width": 1.5}, {"color": "#27ae60", "from": "S022", "to": "act_comm_sports", "width": 1.5}, {"color": "#27ae60", "from": "S022", "to": "enjoys_high", "width": 1.5}, {"color": "#27ae60", "from": "S022", "to": "trouble_low", "width": 1.5}, {"color": "#e74c3c", "from": "S023", "to": "reading_below", "width": 2}, {"color": "#e74c3c", "from": "S023", "to": "act_none", "width": 2}, {"color": "#e74c3c", "from": "S023", "to": "enjoys_low", "width": 2}, {"color": "#e74c3c", "from": "S023", "to": "trouble_high", "width": 2}, {"color": "#f39c12", "from": "S024", "to": "reading_at", "width": 1.5}, {"color": "#27ae60", "from": "S024", "to": "act_sports", "width": 1.5}, {"color": "#27ae60", "from": "S024", "to": "act_arts", "width": 1.5}, {"color": "#27ae60", "from": "S024", "to": "enjoys_high", "width": 1.5}, {"color": "#27ae60", "from": "S024", "to": "trouble_low", "width": 1.5}, {"color": "#f39c12", "from": "S025", "to": "reading_at", "width": 1.5}, {"color": "#27ae60", "from": "S025", "to": "act_faith", "width": 1.5}, {"color": "#f39c12", "from": "S025", "to": "enjoys_mid", "width": 1.5}, {"color": "#27ae60", "from": "S025", "to": "trouble_low", "width": 1.5}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {"physics": {"forceAtlas2Based": {"gravitationalConstant": -80, "centralGravity": 0.005, "springLength": 150, "springConstant": 0.05}, "maxVelocity": 50, "solver": "forceAtlas2Based", "timestep": 0.35, "stabilization": {"iterations": 200}}};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    
+<div style="position: absolute; top: 20px; right: 20px; background: white; padding: 15px; 
+            border: 2px solid #333; border-radius: 8px; font-family: Arial, sans-serif; 
+            font-size: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); z-index: 1000;">
+    <div style="font-weight: bold; font-size: 14px; margin-bottom: 10px; border-bottom: 2px solid #333; padding-bottom: 5px;">
+        NETWORK LEGEND
+    </div>
+    
+    <div style="margin-bottom: 8px; font-weight: bold; color: #2c3e50;">CHILD NODES:</div>
+    <div style="margin-left: 10px; margin-bottom: 4px;">
+        <span style="display: inline-block; width: 12px; height: 12px; background: #c0392b; 
+                     border-radius: 50%; margin-right: 5px; vertical-align: middle;"></span>
+        <span>Below Grade (High Risk)</span>
+    </div>
+    <div style="margin-left: 10px; margin-bottom: 4px;">
+        <span style="display: inline-block; width: 12px; height: 12px; background: #f39c12; 
+                     border-radius: 50%; margin-right: 5px; vertical-align: middle;"></span>
+        <span>At Grade (Medium Risk)</span>
+    </div>
+    <div style="margin-left: 10px; margin-bottom: 10px;">
+        <span style="display: inline-block; width: 12px; height: 12px; background: #27ae60; 
+                     border-radius: 50%; margin-right: 5px; vertical-align: middle;"></span>
+        <span>Above Grade (Low Risk)</span>
+    </div>
+    <div style="margin-left: 10px; margin-bottom: 10px; font-size: 11px; color: #666;">
+        Size = Activity Count
+    </div>
+    
+    <div style="margin-bottom: 8px; font-weight: bold; color: #2c3e50;">CATEGORY NODES:</div>
+    <div style="margin-left: 10px; margin-bottom: 4px;">
+        <span style="display: inline-block; width: 12px; height: 12px; background: #e74c3c; 
+                     border-radius: 50%; margin-right: 5px; vertical-align: middle;"></span>
+        <span>⚠️ Risk Factors</span>
+    </div>
+    <div style="margin-left: 10px; margin-bottom: 4px;">
+        <span style="display: inline-block; width: 12px; height: 12px; background: #f39c12; 
+                     border-radius: 50%; margin-right: 5px; vertical-align: middle;"></span>
+        <span>Neutral</span>
+    </div>
+    <div style="margin-left: 10px; margin-bottom: 10px;">
+        <span style="display: inline-block; width: 12px; height: 12px; background: #27ae60; 
+                     border-radius: 50%; margin-right: 5px; vertical-align: middle;"></span>
+        <span>✓ Protective Factors</span>
+    </div>
+    <div style="margin-left: 10px; margin-bottom: 10px; font-size: 11px; color: #666;">
+        Size = # of Children
+    </div>
+    
+    <div style="margin-bottom: 8px; font-weight: bold; color: #2c3e50;">EDGES:</div>
+    <div style="margin-left: 10px; margin-bottom: 4px;">
+        <span style="display: inline-block; width: 20px; height: 3px; background: #e74c3c; 
+                     margin-right: 5px; vertical-align: middle;"></span>
+        <span>Risk Connection</span>
+    </div>
+    <div style="margin-left: 10px; margin-bottom: 4px;">
+        <span style="display: inline-block; width: 20px; height: 2px; background: #27ae60; 
+                     margin-right: 5px; vertical-align: middle;"></span>
+        <span>Protective Connection</span>
+    </div>
+    <div style="margin-left: 10px; margin-bottom: 4px;">
+        <span style="display: inline-block; width: 20px; height: 2px; background: #f39c12; 
+                     margin-right: 5px; vertical-align: middle;"></span>
+        <span>Neutral Connection</span>
+    </div>
+</div>
+</body>
+</html>
