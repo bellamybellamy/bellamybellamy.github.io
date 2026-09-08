@@ -230,6 +230,10 @@ button {
   margin-top: 36px;
 }
 
+.name-banner {
+   display: flex;
+   color: black;
+}
 
 /* ----------------------------------
    BUTTONS
