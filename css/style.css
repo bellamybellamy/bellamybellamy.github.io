@@ -163,6 +163,17 @@ h1 {
     color 160ms ease;
 }
 
+.project-link:hover {
+   background-color: var(--white);
+   color: var(--black);
+}
+
+.projct-link:active {
+   background-color: var(--white);
+   color: var(--black);
+   width: calc(100% - 18px);
+}
+
 
 /*
    Creates the offset "3D" shadow plane.
