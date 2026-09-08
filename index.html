@@ -1,138 +1,424 @@
-<!-- <!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bellam W.</title>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" type="text/css" id="applicationStylesheet" href="css/style.css"/>
-</head>
-<body>
-<div id="Web_1920__1">
-	<div id="BELLAMY_W">
-		<span>BELLAMY W.</span>
-	</div>
-	<svg class="Rectangle_1">
-		<rect id="Rectangle_1" rx="0" ry="0" x="0" y="0" width="165" height="240">
-		</rect>
-	</svg>
-	<svg class="Rectangle_2">
-		<rect id="Rectangle_2" rx="0" ry="0" x="0" y="0" width="696" height="240">
-		</rect>
-	</svg>
-	<div id="n_">
-		<span>1</span>
-	</div>
-	<div id="Experience">
-		<span>Experience</span>
-	</div>
-	<svg class="Rectangle_7">
-		<rect id="Rectangle_7" rx="0" ry="0" x="0" y="0" width="165" height="240">
-		</rect>
-	</svg>
-	<svg class="Rectangle_8">
-		<rect id="Rectangle_8" rx="0" ry="0" x="0" y="0" width="696" height="240">
-		</rect>
-	</svg>
-	<div id="n__q">
-		<span>2</span>
-	</div>
-	<div id="Education">
-		<span>Education</span>
-	</div>
-	<svg class="Rectangle_9">
-		<rect id="Rectangle_9" rx="0" ry="0" x="0" y="0" width="165" height="240">
-		</rect>
-	</svg>
-	<svg class="Rectangle_10">
-		<rect id="Rectangle_10" rx="0" ry="0" x="0" y="0" width="696" height="240">
-		</rect>
-	</svg>
-	<div id="n__u">
-		<span>3</span>
-	</div>
-	<div id="Interests">
-		<span>Interests</span>
-	</div>
-	<svg class="Rectangle_11">
-		<rect id="Rectangle_11" rx="0" ry="0" x="0" y="0" width="165" height="240">
-		</rect>
-	</svg>
-	<svg class="Rectangle_12">
-		<rect id="Rectangle_12" rx="0" ry="0" x="0" y="0" width="696" height="240">
-		</rect>
-	</svg>
-	<div id="n__y">
-		<span>4</span>
-	</div>
-	<div id="Projects">
-		<span>Projects</span>
-	</div>
-</div>
-</body>
-</html> -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bellamy W.</title>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="css/style.css">
-<script>
-	function handleClick() {
-		window.location.href = "network_graph.html";
-	}
-</script>
-<!-- <script>
-	function handleClick() {
-		window.location.href = "experience.html";
-	}
-</script>
-<script>
-	function eduHandleClick() {
-		window.location.href = "education.html";
-	}
-</script>
-<script>
-	function intHandleClick() {
-		window.location.href = "interests.html";
-	}
-</script>
-<script>
-	function projHandleClick() {
-		window.location.href = "projects.html";
-	}
-</script> -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta
+    name="description"
+    content="Researcher and analyst working at the intersection of criminology, data analysis, technology, and justice."
+  />
+
+  <title>Bellamy Williams | Research & Data Portfolio</title>
+
+  <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
-<main>
-	<div class="section" onclick="handleClick()">
-		<div class="number">0</div>
-		<div class="title">CRJ 601 Final</div>
-	</div>
-	<!-- <div class="section" onclick="handleClick()">
-		<div class="number">1</div>
-		<div class="title">Experience</div>
-	</div>
-    <div class="section" onclick="eduHandleClick()">
-        <div class="number">2</div>
-        <div class="title">Education</div>
+
+  <header class="site-header">
+    <div class="container nav-container">
+      <a class="logo" href="#top">YN</a>
+
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a href="#work">Work</a>
+        <a href="#research">Research</a>
+        <a href="#technical">Technical</a>
+        <a href="#about">About</a>
+      </nav>
+
+      <button
+        class="menu-button"
+        id="menuButton"
+        aria-label="Open navigation"
+        aria-expanded="false"
+      >
+        Menu
+      </button>
     </div>
-    <div class="section" onclick="intHandleClick()">
-        <div class="number">3</div>
-        <div class="title">Interests</div>
+
+    <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+      <a href="#work">Work</a>
+      <a href="#research">Research</a>
+      <a href="#technical">Technical</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+
+        <div class="hero-copy">
+          <p class="eyebrow">Researcher · Analyst · Technologist</p>
+
+          <h1>
+            I investigate complex problems using
+            <span class="muted">data, research, and code.</span>
+          </h1>
+
+          <p class="hero-description">
+            I am a criminology researcher with a background in software
+            engineering and quantitative analysis. My work focuses on turning
+            complex evidence into clear, defensible findings while building
+            tools and analytical workflows that make that process more rigorous.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="#work">
+              View selected work
+            </a>
+
+            <a
+              class="button button-secondary"
+              href="https://github.com/YOUR-USERNAME"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
+            </a>
+          </div>
+        </div>
+
+        <aside class="hero-meta">
+          <div class="meta-row">
+            <span>Focus</span>
+            <strong>Investigation & analysis</strong>
+          </div>
+
+          <div class="meta-row">
+            <span>Methods</span>
+            <strong>Quantitative + qualitative</strong>
+          </div>
+
+          <div class="meta-row">
+            <span>Tools</span>
+            <strong>SQL · R · Stata · Tableau</strong>
+          </div>
+
+          <div class="meta-row">
+            <span>Background</span>
+            <strong>Criminology + software engineering</strong>
+          </div>
+        </aside>
+
+      </div>
+    </section>
+
+
+    <!-- SELECTED WORK -->
+    <section class="section" id="work">
+      <div class="container">
+
+        <div class="section-heading">
+          <p class="eyebrow">Selected work</p>
+          <h2>Evidence of how I investigate, analyze, and communicate.</h2>
+        </div>
+
+        <div class="project-grid">
+
+          <!-- PROJECT 1 -->
+          <article class="project-card project-card-large">
+            <div>
+              <p class="project-number">01</p>
+
+              <div class="tags">
+                <span>Quantitative Analysis</span>
+                <span>Stata</span>
+                <span>Regression</span>
+              </div>
+
+              <h3>Federal Sentencing Disparities</h3>
+
+              <p>
+                An empirical analysis of disparities in federal sentencing,
+                examining downward departures and sentence length across
+                race and gender while accounting for legal and extralegal
+                factors.
+              </p>
+            </div>
+
+            <div class="project-footer">
+              <p>
+                Demonstrates model specification, data cleaning, interpretation,
+                and communicating findings under methodological constraints.
+              </p>
+
+              <a href="#" class="text-link">
+                Read technical report →
+              </a>
+            </div>
+          </article>
+
+
+          <!-- PROJECT 2 -->
+          <article class="project-card">
+            <div>
+              <p class="project-number">02</p>
+
+              <div class="tags">
+                <span>Dashboard</span>
+                <span>Tableau</span>
+                <span>Survey Data</span>
+              </div>
+
+              <h3>Survey Analytics Dashboard</h3>
+
+              <p>
+                Interactive reporting system for examining survey responses,
+                identifying patterns, and translating results into usable
+                information for stakeholders.
+              </p>
+            </div>
+
+            <a href="#" class="text-link">
+              View dashboard →
+            </a>
+          </article>
+
+
+          <!-- PROJECT 3 -->
+          <article class="project-card">
+            <div>
+              <p class="project-number">03</p>
+
+              <div class="tags">
+                <span>Research</span>
+                <span>Writing</span>
+                <span>Justice</span>
+              </div>
+
+              <h3>Youth and Violent Crime</h3>
+
+              <p>
+                Research translating empirical evidence on youth violence,
+                development, criminal justice policy, and intervention into
+                accessible analysis for a broad audience.
+              </p>
+            </div>
+
+            <a href="#" class="text-link">
+              Read publication →
+            </a>
+          </article>
+
+
+          <!-- PROJECT 4 -->
+          <article class="project-card">
+            <div>
+              <p class="project-number">04</p>
+
+              <div class="tags">
+                <span>Automation</span>
+                <span>Node.js</span>
+                <span>API</span>
+              </div>
+
+              <h3>Automated Research Data Pipeline</h3>
+
+              <p>
+                Built workflows connecting survey collection, APIs, automated
+                exports, and reporting tools to reduce manual data handling
+                and create reproducible research infrastructure.
+              </p>
+            </div>
+
+            <a
+              href="https://github.com/YOUR-USERNAME"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-link"
+            >
+              View code →
+            </a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- RESEARCH -->
+    <section class="section section-alt" id="research">
+      <div class="container">
+
+        <div class="section-heading">
+          <p class="eyebrow">Research & writing</p>
+          <h2>Clear analysis that can withstand scrutiny.</h2>
+        </div>
+
+        <div class="document-list">
+
+          <a class="document-row" href="#">
+            <div>
+              <span class="document-type">Publication</span>
+              <h3>Youth and Violent Crime</h3>
+            </div>
+
+            <div class="document-meta">
+              Academy for Justice
+            </div>
+
+            <span class="arrow">↗</span>
+          </a>
+
+
+          <a class="document-row" href="#">
+            <div>
+              <span class="document-type">Technical Report</span>
+              <h3>Federal Sentencing Disparities</h3>
+            </div>
+
+            <div class="document-meta">
+              Quantitative analysis
+            </div>
+
+            <span class="arrow">↗</span>
+          </a>
+
+
+          <a class="document-row" href="#">
+            <div>
+              <span class="document-type">Research</span>
+              <h3>Procedural Justice & Police Legitimacy</h3>
+            </div>
+
+            <div class="document-meta">
+              Empirical research
+            </div>
+
+            <span class="arrow">↗</span>
+          </a>
+
+
+          <a class="document-row" href="#">
+            <div>
+              <span class="document-type">Case Study</span>
+              <h3>Research Data Infrastructure</h3>
+            </div>
+
+            <div class="document-meta">
+              Systems + automation
+            </div>
+
+            <span class="arrow">↗</span>
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- TECHNICAL -->
+    <section class="section" id="technical">
+      <div class="container">
+
+        <div class="section-heading">
+          <p class="eyebrow">Technical toolkit</p>
+          <h2>Research judgment backed by technical fluency.</h2>
+        </div>
+
+        <div class="skills-grid">
+
+          <div class="skill-group">
+            <h3>Analysis</h3>
+            <p>
+              Regression analysis, descriptive statistics, survey analysis,
+              data validation, causal reasoning, qualitative coding.
+            </p>
+          </div>
+
+          <div class="skill-group">
+            <h3>Data</h3>
+            <p>
+              SQL, Stata, R, Excel, Tableau, data cleaning,
+              reproducible workflows, dashboard development.
+            </p>
+          </div>
+
+          <div class="skill-group">
+            <h3>Engineering</h3>
+            <p>
+              JavaScript, Node.js, APIs, Git/GitHub, automation,
+              data pipelines, C#, software development.
+            </p>
+          </div>
+
+          <div class="skill-group">
+            <h3>Research</h3>
+            <p>
+              Criminology, justice systems, policy research,
+              technical writing, literature synthesis, research design.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ABOUT -->
+    <section class="section section-alt" id="about">
+      <div class="container about-grid">
+
+        <div>
+          <p class="eyebrow">About</p>
+
+          <h2>
+            I work where investigation, technology, and human judgment meet.
+          </h2>
+        </div>
+
+        <div class="about-copy">
+          <p>
+            My background spans criminological research, quantitative analysis,
+            and software engineering. That combination shapes how I approach
+            analytical problems: establish what the evidence actually shows,
+            investigate inconsistencies, document the reasoning, and avoid
+            treating automated outputs as ground truth.
+          </p>
+
+          <p>
+            I am especially interested in work where data and technology help
+            analysts investigate complex behavior while preserving the need
+            for careful human judgment.
+          </p>
+
+          <div class="about-links">
+            <a href="cv.html">CV / Résumé →</a>
+
+            <a
+              href="https://github.com/YOUR-USERNAME"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub →
+            </a>
+
+            <a href="mailto:YOUR_EMAIL@example.com">
+              Email →
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>© <span id="year"></span> Your Name</p>
+
+      <p>Research · Analysis · Technology</p>
     </div>
-    <div class="section" onclick="projHandleClick()">
-        <div class="number">4</div>
-        <div class="title">Projects</div>
-    </div> -->
-</main>
-<footer>
-    <h1>BELLAMY W.</h1>
-</footer>
+  </footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
-
