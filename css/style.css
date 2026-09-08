@@ -233,6 +233,7 @@ button {
 .name-banner {
    display: flex;
    color: black;
+   font-size: 1.16rem;
 }
 
 /* ----------------------------------
