@@ -119,13 +119,40 @@ h1 {
   line-height: 1.7;
 }
 
-.home-button:hover {
-   transition:
+.home-button {
+  display: inline-block;
+
+  color: var(--white);
+  text-decoration: none;
+
+  transition:
     transform 160ms ease,
     background-color 160ms ease,
     color 160ms ease;
+}
 
-   transform: skewX(-7deg);
+.home-button h1 {
+  padding: 4px 10px;
+
+  transition:
+    background-color 160ms ease,
+    color 160ms ease;
+}
+
+.home-button:hover {
+  transform:
+    skewX(-7deg)
+    translate(-3px, -3px);
+}
+
+.home-button:hover h1 {
+  background: var(--white);
+  color: var(--black);
+}
+
+.home-button:focus-visible {
+  outline: 3px solid var(--white);
+  outline-offset: 5px;
 }
 
 /* ================================
