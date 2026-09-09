@@ -260,7 +260,46 @@ h1 {
 
 
 .project-arrow {
-  font-size: 1.4rem;
+  position: relative;
+
+  display: block;
+
+  width: 18px;
+  height: 18px;
+
+  flex-shrink: 0;
+}
+
+.project-arrow::before {
+  content: "";
+
+  position: absolute;
+
+  width: 11px;
+  height: 11px;
+
+  top: 1px;
+  right: 1px;
+
+  border-top: 2px solid currentColor;
+  border-right: 2px solid currentColor;
+}
+
+.project-arrow::after {
+  content: "";
+
+  position: absolute;
+
+  width: 16px;
+  height: 2px;
+
+  top: 8px;
+  left: 0;
+
+  background: currentColor;
+
+  transform: rotate(-45deg);
+  transform-origin: center;
 }
 
 
