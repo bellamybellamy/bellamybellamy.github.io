@@ -120,6 +120,20 @@ h1 {
   line-height: 1.7;
 }
 
+.home-button,
+.home-button:link,
+.home-button:visited,
+.home-button:hover,
+.home-button:active {
+  text-decoration: none !important;
+  color: inherit;
+}
+
+.home-button h1 {
+  text-decoration: none !important;
+  color: inherit;
+}
+
 .home-button {
   display: inline-block;
   transition: transform 160ms ease;
