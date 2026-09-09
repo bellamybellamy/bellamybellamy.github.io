@@ -120,60 +120,14 @@ h1 {
 }
 
 .home-button {
-  position: relative;
   display: inline-block;
-
-  color: var(--white);
-  text-decoration: none;
-
-  transition:
-    transform 160ms ease,
-    color 160ms ease;
-}
-
-.home-button h1 {
-  position: relative;
-  z-index: 1;
-
-  margin: 0;
-  padding: 6px 14px;
-
-  transition:
-    background-color 160ms ease,
-    color 160ms ease;
-}
-
-.home-button::after {
-  content: "";
-
-  position: absolute;
-  inset: 7px -8px -8px 7px;
-
-  z-index: 0;
-
-  border: 1px solid transparent;
-
-  transition: border-color 160ms ease;
+  transition: transform 160ms ease;
 }
 
 .home-button:hover {
   transform:
     skewX(-7deg)
     translate(-3px, -3px);
-}
-
-.home-button:hover h1 {
-  background: var(--white);
-  color: var(--black);
-}
-
-.home-button:hover::after {
-  border-color: var(--gray-mid);
-}
-
-.home-button:focus-visible {
-  outline: 3px solid var(--white);
-  outline-offset: 6px;
 }
 
 /* ================================
