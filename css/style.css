@@ -119,6 +119,14 @@ h1 {
   line-height: 1.7;
 }
 
+.home-button:hover {
+   transition:
+    transform 160ms ease,
+    background-color 160ms ease,
+    color 160ms ease;
+
+   transform: skewX(-7deg);
+}
 
 /* ================================
    LINKS
