@@ -1,4 +1,31 @@
-<section class="cv-section">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Bellamy Williams | Portfolio</title>  
+
+  <meta
+    name="description"
+    content="Research, data analysis, technical reports, dashboards, and software projects."
+  />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <main class="page-shell">
+
+    <header class="intro">
+      <p class="kicker">Research · Analysis · Technology</p>
+
+     <a href="#" class="home-button">
+       <h1>Bellamy Williams</h1>
+     </a> 
+</header>
+  <section class="links" aria-label="Selected work">
     <p class="cv-label">Experience</p>
 
     <div class="cv-entry">
@@ -15,4 +42,39 @@
             Conduct quantitative and qualitative analysis...
         </p>
     </div>
-</section>
+  </section>
+    <footer class="footer">
+
+      <div class="footer-links">
+        <a 
+          href="cv.html"
+          target="blank" 
+          rel="noopener noreferrer"
+        >
+          CV
+        </a>
+
+        <a href="mailto:lbellamyw@gmail.com">Email</a>
+
+        <a
+          href="https://github.com/bellamybellamy/ai-changelog-lab"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub
+        </a>
+      </div>
+
+      <p>© <span id="year"></span> Bellamy Williams</p>
+
+    </footer>
+
+ </main>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>
