@@ -120,39 +120,44 @@ h1 {
   line-height: 1.7;
 }
 
-.home-button,
+.home-button {
+  display: inline-block;
+  color: var(--white);
+  text-decoration: none !important;
+  border-bottom: none !important;
+  cursor: pointer;
+  transform: translate(0, 0);
+  transition: transform 160ms ease;
+}
+
 .home-button:link,
 .home-button:visited,
 .home-button:hover,
 .home-button:active,
 .home-button:focus {
+  color: var(--white) !important;
   text-decoration: none !important;
-  color: inherit !important;
   border-bottom: none !important;
 }
 
 .home-button h1 {
+  margin: 0;
+  color: inherit;
   text-decoration: none !important;
   border-bottom: none !important;
 }
 
-.home-button {
-  display: inline-block;
-
-  transition:
-    transform 160ms ease;
-}
-
 .home-button:hover {
-  transform:
-    skewX(-7deg)
-    translate(-3px, -3px);
+  transform: skewX(-7deg) translate(-3px, -3px);
 }
 
 .home-button:active {
-  transform:
-    skewX(-4deg)
-    translate(-2px, -2px);
+  transform: skewX(-7deg) translate(-1px, -1px);
+}
+
+.home-button:focus-visible {
+  outline: 3px solid var(--white);
+  outline-offset: 5px;
 }
 
 /* ================================
