@@ -368,6 +368,224 @@ h1 {
 
 }
 
+/* ================================
+   CV
+================================ */
+
+.cv-contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  margin-top: 24px;
+
+  color: var(--gray-light);
+  font-size: 0.85rem;
+}
+
+.cv-contact a {
+  color: inherit;
+  text-underline-offset: 4px;
+}
+
+
+.cv-section {
+  padding: 48px 0;
+
+  border-top: 1px solid var(--gray-mid);
+}
+
+
+.cv-label {
+  margin: 0 0 38px;
+
+  color: var(--gray-light);
+
+  font-size: 0.72rem;
+  font-weight: 700;
+
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+
+.cv-summary {
+  max-width: 680px;
+
+  margin: 0;
+
+  color: var(--gray-light);
+
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+
+.cv-entry {
+  padding: 0 0 48px;
+  margin-bottom: 48px;
+
+  border-bottom: 1px solid var(--gray-dark);
+}
+
+
+.cv-entry:last-child {
+  margin-bottom: 0;
+}
+
+
+.cv-entry-compact {
+  padding-bottom: 28px;
+  margin-bottom: 28px;
+}
+
+
+.cv-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  gap: 32px;
+
+  margin-bottom: 20px;
+}
+
+
+.cv-heading h2 {
+  margin: 0 0 6px;
+
+  font-size: clamp(1.25rem, 3vw, 1.65rem);
+  line-height: 1.2;
+
+  letter-spacing: -0.025em;
+}
+
+
+.cv-heading p {
+  margin: 0;
+
+  color: var(--gray-light);
+  font-size: 0.9rem;
+}
+
+
+.cv-org-detail {
+  display: block;
+
+  margin-top: 3px;
+
+  color: var(--gray-light);
+  font-size: 0.8rem;
+}
+
+
+.cv-date {
+  flex-shrink: 0;
+
+  color: var(--gray-light);
+
+  font-size: 0.78rem;
+
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+
+.cv-description {
+  max-width: 700px;
+
+  margin: 0;
+  padding-left: 20px;
+
+  color: var(--gray-light);
+
+  font-size: 0.93rem;
+  line-height: 1.75;
+}
+
+
+.cv-description li {
+  padding-left: 7px;
+  margin-bottom: 13px;
+}
+
+
+.cv-description li:last-child {
+  margin-bottom: 0;
+}
+
+
+.cv-skills {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 1px;
+
+  border: 1px solid var(--gray-mid);
+
+  background: var(--gray-mid);
+}
+
+
+.cv-skill-group {
+  padding: 24px;
+
+  background: var(--black);
+}
+
+
+.cv-skill-group h2 {
+  margin: 0 0 12px;
+
+  font-size: 0.8rem;
+
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+
+.cv-skill-group p {
+  margin: 0;
+
+  color: var(--gray-light);
+
+  font-size: 0.85rem;
+  line-height: 1.7;
+}
+
+
+/* ================================
+   CV MOBILE
+================================ */
+
+@media (max-width: 640px) {
+
+  .cv-section {
+    padding: 38px 0;
+  }
+
+  .cv-label {
+    margin-bottom: 28px;
+  }
+
+  .cv-heading {
+    flex-direction: column;
+
+    gap: 10px;
+  }
+
+  .cv-entry {
+    padding-bottom: 36px;
+    margin-bottom: 36px;
+  }
+
+  .cv-skills {
+    grid-template-columns: 1fr;
+  }
+
+}
+
 
 /* ================================
    REDUCED MOTION
