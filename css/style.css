@@ -121,7 +121,21 @@ h1 {
 
 .home-button {
   display: inline-block;
+  color: var(--white);
+  text-decoration: none;
+
   transition: transform 160ms ease;
+}
+
+.home-button:visited,
+.home-button:hover,
+.home-button:active {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.home-button h1 {
+  text-decoration: none;
 }
 
 .home-button:hover {
