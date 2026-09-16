@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>
+    Content Discovery Redesign | Bellamy Williams
+  </title>
+
+  <meta
+    name="description"
+    content="UX case study examining the redesign of content discovery and navigation for Journey.do."
+  />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+
+<body>
+
+  <main class="page-shell case-study-shell">
+
+
+    <!-- CASE STUDY HERO -->
+
+    <header class="case-study-hero">
+
+      <a
+        href="ux-ui.html"
+        class="case-study-back"
+      >
+        ← UX / UI
+      </a>
+
+      <p class="kicker">
+        UX Research · Product Design · Engineering
+      </p>
+
+      <h1 class="case-study-title">
+        Redesigning Content Discovery Around User Behavior
+      </h1>
+
+      <p class="case-study-subtitle">
+        Journey.do · Learning Management Platform
+      </p>
+
+      <p class="case-study-lead">
+        Users were struggling to find learning content despite
+        dedicated navigation designed to help them do so.
+        Research revealed that the problem wasn't simply content
+        visibility. Users had developed a navigation model that
+        differed from the one the product was designed around.
+      </p>
+
+    </header>
+
+
+
+    <!-- PROJECT INFO -->
+
+    <section class="case-study-meta">
+
+      <div>
+        <span>Role</span>
+        <p>
+          Product Engineer<br />
+          UX Researcher<br />
+          UX / UI Designer
+        </p>
+      </div>
+
+      <div>
+        <span>Methods</span>
+        <p>
+          User Interviews<br />
+          Contextual Walkthroughs<br />
+          Behavioral Analysis<br />
+          Comparative Research
+        </p>
+      </div>
+
+      <div>
+        <span>Design</span>
+        <p>
+          Information Architecture<br />
+          Wireframing<br />
+          Interaction Design<br />
+          Responsive Design
+        </p>
+      </div>
+
+      <div>
+        <span>Tools</span>
+        <p>
+          LogRocket<br />
+          Adobe XD
+        </p>
+      </div>
+
+    </section>
+
+
+
+    <!-- CONTEXT -->
+
+    <section class="case-study-section">
+
+      <p class="case-study-label">
+        01 · Context
+      </p>
+
+      <div class="case-study-copy">
+
+        <h2>
+          Supporting learning for system-involved youth
+        </h2>
+
+        <p>
+          Journey.do is a learning management system designed
+          to help youth strengthen protective factors associated
+          with reducing further system involvement.
+        </p>
+
+        <p>
+          Youth are matched with evidence-based learning modules
+          based on assessment results and input from supervising
+          officers. Completing modules allows youth to earn
+          certificates documenting their progress.
+        </p>
+
+        <p>
+          The youth-facing experience originally organized
+          content across three primary areas: Grow for learning
+          content, Connect for peer stories and reflections, and
+          Feed for content already available to the user.
+        </p>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- PROBLEM -->
+
+    <section class="case-study-section">
+
+      <p class="case-study-label">
+        02 · Problem
+      </p>
+
+      <div class="case-study-copy">
+
+        <h2>
+          Users couldn't find new content.
+        </h2>
+
+        <p>
+          Officers repeatedly reported difficulty locating new
+          content within the platform. When directed to the Grow
+          page, some users did not recognize the feature despite
+          its position in the primary navigation.
+        </p>
+
+        <p>
+          Rather than treating the issue as a training problem,
+          I investigated how users were actually navigating
+          Journey.do.
+        </p>
+
+      </div>
+
+
+      <div class="artifact-placeholder">
+
+        <span>DESIGN ARTIFACT</span>
+
+        <strong>
+          Original Information Architecture
+        </strong>
+
+        <p>
+          Intended navigation compared with observed navigation
+          behavior.
+        </p>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- RESEARCH -->
+
+    <section class="case-study-section">
+
+      <p class="case-study-label">
+        03 · Research
+      </p>
+
+      <div class="case-study-copy">
+
+        <h2>
+          Understanding how users actually navigated
+        </h2>
+
+        <p>
+          I interviewed probation and detention officers and
+          administrators to understand where they experienced
+          friction. During contextual walkthroughs, participants
+          demonstrated how they normally navigated Journey.do
+          and repeatedly referenced familiar platforms such as
+          Facebook when describing how they expected the
+          application to behave.
+        </p>
+
+        <p>
+          I then reviewed behavioral sessions in LogRocket.
+          Users were relying heavily on the Feed to navigate
+          through Journey.do while rarely attempting to use
+          Grow as the primary content-discovery experience.
+        </p>
+
+        <p>
+          Because participants themselves referenced social
+          platforms, I examined how familiar products structured
+          feed-centered content discovery and used those patterns
+          as comparative design research.
+        </p>
+
+      </div>
+
+
+      <div class="artifact-placeholder">
+
+        <span>RESEARCH ARTIFACT</span>
+
+        <strong>
+          Research Synthesis
+        </strong>
+
+        <p>
+          Interviews · Walkthroughs · Behavioral Analysis ·
+          Comparative Research
+        </p>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- INSIGHT -->
+
+    <section class="case-study-section case-study-insight">
+
+      <p class="case-study-label">
+        04 · Key Insight
+      </p>
+
+      <blockquote>
+        Users weren't simply failing to find Grow.
+        The product's navigation model did not match
+        the mental model users brought to the experience.
+      </blockquote>
+
+      <div class="case-study-copy">
+
+        <p>
+          The behavioral evidence and contextual walkthroughs
+          suggested that users treated the Feed as a primary
+          content-discovery surface rather than as a secondary
+          destination.
+        </p>
+
+        <p>
+          Instead of adding more instructions directing users
+          toward Grow, I proposed redesigning the product around
+          the behavior users were already demonstrating.
+        </p>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- DESIGN -->
+
+    <section class="case-study-section">
+
+      <p class="case-study-label">
+        05 · Design Direction
+      </p>
+
+      <div class="case-study-copy">
+
+        <h2>
+          Make the Feed a first-class content discovery surface.
+        </h2>
+
+        <p>
+          The redesigned Feed expanded the amount and type of
+          information users could discover without requiring
+          them to understand the platform's underlying content
+          structure.
+        </p>
+
+        <p>
+          I designed a flexible card system for stories,
+          protective-factor content, learning modules, and
+          announcements. Cards provided more context before
+          users opened them, including descriptions, story
+          previews, and relevant imagery.
+        </p>
+
+      </div>
+
+
+      <div class="artifact-placeholder artifact-large">
+
+        <span>DESIGN ARTIFACT</span>
+
+        <strong>
+          Feed Wireframes
+        </strong>
+
+        <p>
+          Desktop + mobile wireframes will be added here.
+        </p>
+
+      </div>
+
+
+      <div class="artifact-placeholder artifact-large">
+
+        <span>UI ARTIFACT</span>
+
+        <strong>
+          Feed Card System
+        </strong>
+
+        <p>
+          Story · Grow · Module · Announcement
+        </p>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- INTERACTION -->
+
+    <section class="case-study-section">
+
+      <p class="case-study-label">
+        06 · Expanding Interaction
+      </p>
+
+      <div class="case-study-copy">
+
+        <h2>
+          From content discovery to social interaction
+        </h2>
+
+        <p>
+          After redesigning the Feed, I expanded its interaction
+          model with messaging, reactions, comments, peer
+          completion indicators, profile navigation, and
+          contextual actions.
+        </p>
+
+        <p>
+          Feed-card context menus provided quick access to
+          actions such as pinning, reporting, commenting, and
+          navigating directly to the associated learning
+          content.
+        </p>
+
+      </div>
+
+
+      <div class="artifact-placeholder artifact-large">
+
+        <span>INTERACTION ARTIFACT</span>
+
+        <strong>
+          Card States & Interactions
+        </strong>
+
+        <p>
+          Default · Reaction · Comments · Context Menu
+        </p>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- IMPLEMENTATION -->
+
+    <section class="case-study-section">
+
+      <p class="case-study-label">
+        07 · Implementation
+      </p>
+
+      <div class="case-study-copy">
+
+        <h2>
+          Designing and shipping the experience
+        </h2>
+
+        <p>
+          I was responsible for product planning, wireframing,
+          front-end design, and front-end implementation.
+          I translated the redesign into an epic, gathered user
+          stories, and defined the development tasks required
+          to implement the experience.
+        </p>
+
+        <p>
+          I collaborated with two senior backend engineers on
+          the supporting backend architecture and independently
+          connected and implemented the front-end experience.
+        </p>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- RESULTS -->
+
+    <section class="case-study-section">
+
+      <p class="case-study-label">
+        08 · Outcome
+      </p>
+
+      <div class="case-study-copy">
+
+        <h2>
+          Evaluating the redesign
+        </h2>
+
+        <p>
+          Following implementation, I launched an NPS survey
+          to evaluate the updated experience. NPS scores
+          increased compared with the previous measurement.
+        </p>
+
+        <p>
+          The recurring complaints from users who could not
+          locate content also stopped following the redesign.
+        </p>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- REFLECTION -->
+
+    <section class="case-study-section">
+
+      <p class="case-study-label">
+        09 · Reflection
+      </p>
+
+      <div class="case-study-copy">
+
+        <h2>
+          Design around behavior, not assumptions.
+        </h2>
+
+        <p>
+          The project changed how I approached usability
+          problems. The original interface reflected how we
+          expected users to navigate the platform, while
+          behavioral research showed that users had developed
+          a different mental model.
+        </p>
+
+        <p>
+          Rather than adding instructions to reinforce the
+          intended flow, I redesigned the experience around
+          navigation behavior users were already demonstrating.
+        </p>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+      <div class="footer-links">
+
+        <a href="ux-ui.html">
+          UX / UI
+        </a>
+
+        <a href="index.html">
+          Portfolio
+        </a>
+
+        <a href="mailto:lbellamyw@gmail.com">
+          Email
+        </a>
+
+      </div>
+
+      <p>
+        © <span id="year"></span> Bellamy Williams
+      </p>
+
+    </footer>
+
+
+  </main>
+
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>
